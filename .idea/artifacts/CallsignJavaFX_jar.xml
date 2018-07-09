@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="CallsignJavaFX:jar">
-    <output-path>$USER_HOME$/Загрузки</output-path>
-    <root id="archive" name="CallsignJavaFX.jar">
-      <element id="module-output" name="CallsignJavaFX" />
-    </root>
-  </artifact>
-</component>
