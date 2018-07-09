@@ -63,7 +63,7 @@ public class Controller {
         poz1.findingIndex(getFirstLineTextField(), getSecondLineTextField());
 
         try {
-            poz1.readTable("/home/vovan/Projects/Pet-project callsign/file_table.txt");
+            poz1.readTable("/home/vova/workspace/Callsign/resources/file_table.txt");
         } catch (IOException e) {
             System.out.println("Ошибка здесь!!! В адресе к таблице");
             e.printStackTrace();
@@ -77,7 +77,7 @@ public class Controller {
         poz2.findingIndex(getFirstLineTextField(), getSecondLineTextField());
 
         try {
-            poz2.readTable("/home/vovan/Projects/Pet-project callsign/file_table.txt");
+            poz2.readTable("/home/vova/workspace/Callsign/resources/file_table.txt");
         } catch (IOException e) {
             System.out.println("Ошибка здесь!!!");
             e.printStackTrace();
