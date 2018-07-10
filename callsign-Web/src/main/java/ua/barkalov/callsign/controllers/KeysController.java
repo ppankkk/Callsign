@@ -22,15 +22,15 @@ public class KeysController {
         this.keysService = keysService;
     }
 
-//    @RequestMapping(value = "{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-//    public @ResponseBody KeysDTO get(@PathVariable("id") Long id){
-//        return keysService.get(id);
-//    }
-
-    @RequestMapping(value = "{data}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody Coordinates get(@PathVariable("data") String data) {
-        return keysService.getCoordinates(keysService.get(1L), data);
+    @RequestMapping(value = "{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public @ResponseBody KeysDTO get(@PathVariable("id") Long id){
+        return keysService.get(id);
     }
+
+//    @RequestMapping(value = "{data}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+//    public @ResponseBody Coordinates get(@PathVariable("data") String data) {
+//        return keysService.getCoordinates(keysService.get(1L), data);
+//    }
 }
 
 //    KeysDTO get(Long id);

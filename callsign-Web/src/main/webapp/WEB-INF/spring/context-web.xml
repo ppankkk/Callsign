@@ -18,6 +18,6 @@
     <mvc:annotation-driven/>
     <mvc:default-servlet-handler/>
 
-    <mvc:redirect-view-controller path="/" redirect-url="/index.jsp"/>
+    <mvc:redirect-view-controller path="/" redirect-url="/index.html"/>
 
 </beans>

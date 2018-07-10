@@ -11,7 +11,7 @@
     <module>callsign-DAO</module>
     <module>callsign-Services</module>
     <module>callsign-Web</module>
-      <module>Runner</module>
+      <!--<module>Runner</module>-->
   </modules>
   <packaging>pom</packaging>
 
