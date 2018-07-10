@@ -15,7 +15,7 @@ public class Keys {
     @Column(name = "FIRST_KEY", nullable = false)
     private String first_Key;
 
-    @Column(name = "LAST_KEY", nullable = false)
+    @Column(name = "SECOND_KEY", nullable = false)
     private String last_Key;
 
     public Keys(String first_Key, String last_Key) {

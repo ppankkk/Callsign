@@ -45,4 +45,14 @@ public class Coordinates {
     public void setSecondKeyY(Integer secondKeyY) {
         this.secondKeyY = secondKeyY;
     }
+
+    @Override
+    public String toString() {
+        return "Coordinates{" +
+                "firstKeyX=" + firstKeyX +
+                ", firstKeyY=" + firstKeyY +
+                ", secondKeyX=" + secondKeyX +
+                ", secondKeyY=" + secondKeyY +
+                '}';
+    }
 }

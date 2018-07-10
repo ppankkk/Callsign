@@ -50,7 +50,7 @@
 
         <dependency>
             <groupId>ua.barkalov.callsign</groupId>
-            <artifactId>callsign-Services</artifactId>
+            <artifactId>callsignServices</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
