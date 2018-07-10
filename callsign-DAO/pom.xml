@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>callsign-DAO</artifactId>
+    <artifactId>callsignDAO</artifactId>
 
     <dependencies>
         <!-- ORM -->
@@ -29,19 +29,16 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>${h2.version}</version>
             <scope>runtime</scope>
         </dependency>
         <!-- AOP -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aspects</artifactId>
-            <version>${springVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
-            <version>${springVersion}</version>
         </dependency>
         <!-- Testing -->
         <dependency>
@@ -52,7 +49,6 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>${springVersion}</version>
             <scope>test</scope>
         </dependency>
         <dependency>

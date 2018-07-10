@@ -9,12 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>callsign-Services</artifactId>
+    <artifactId>callsignServices</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>ua.barkalov.callsign</groupId>
-            <artifactId>callsign-DAO</artifactId>
+            <artifactId>callsignDAO</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>callsign-Web</artifactId>
+    <artifactId>callsignWeb</artifactId>
     <packaging>war</packaging>
 
     <!--<name>callsign-Web Maven Webapp</name>-->
