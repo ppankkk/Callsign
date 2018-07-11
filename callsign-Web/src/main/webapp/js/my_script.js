@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    document.getElementById("morzeButton").title("kjhg")
+
     $(".btn-primary").click(function () {
         $.getJSON("/keys/1", function (response) {
             $.each(response, function (i, item) {
