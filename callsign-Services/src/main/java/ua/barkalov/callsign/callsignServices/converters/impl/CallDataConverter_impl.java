@@ -10,6 +10,7 @@ public class CallDataConverter_impl implements CallDataConverter {
 
     @Override
     public CallDataDTO toDto(CallData entity) {
+
         return new CallDataDTO(entity.getCallData());
     }
 }

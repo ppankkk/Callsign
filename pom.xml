@@ -18,6 +18,7 @@
   <name>callsign</name>
   <url>https://github.com/Axel4ley/Callsign</url>
 
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
@@ -169,6 +170,8 @@
             <configuration>
               <port>8080</port>
               <path>/</path>
+              <charset>UTF-8</charset>
+              <uriEncoding>UTF-8</uriEncoding>
             </configuration>
         </plugin>
       </plugins>

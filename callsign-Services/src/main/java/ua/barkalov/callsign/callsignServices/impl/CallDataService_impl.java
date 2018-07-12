@@ -33,11 +33,30 @@ public class CallDataService_impl implements CallDataService {
         String callsign = "";
         String[] tmp;
 
+        CallDataDTO callDataDTO;
+        Integer intId = coordinates.getFirstKeyX();
+        Long id = intId.longValue();
+        callDataDTO = get(id);
+
+        System.out.println(intId);
+        System.out.println(id);
+        System.out.println(callDataDTO.toString());
+
+
         tmp = get(coordinates.getFirstKeyX().longValue()).getCallData().split("/");
-        callsign += tmp[coordinates.getFirstKeyY()].substring(0, 1);
+
+        for (int i = 0; i < tmp.length; i++) {
+            System.out.println(i + " " + tmp[i]);
+        }
+
+        System.out.println(coordinates.toString());
+
+        callsign += tmp[coordinates.getFirstKeyY()].substring(0, 2);
+
+        System.out.println(callsign);
 
         tmp = get(coordinates.getSecondKeyX().longValue()).getCallData().split("/");
-        callsign += tmp[coordinates.getSecondKeyY()].substring(2, 3);
+        callsign += tmp[coordinates.getSecondKeyY()].substring(2, 4);
 
         return callsign;
     }
