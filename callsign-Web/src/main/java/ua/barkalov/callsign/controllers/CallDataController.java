@@ -5,8 +5,10 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import ua.barkalov.callsign.callsignServices.CallDataService;
+import ua.barkalov.callsign.callsignServices.DTO.FindData;
 import ua.barkalov.callsign.callsignServices.KeysService;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Controller
@@ -27,6 +29,21 @@ public class CallDataController {
                     consumes = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody String get(@RequestParam("data") String data, @RequestParam("day") Long day){
         return callDataService.getCallsign(keysService.getCoordinates(keysService.get(day), data));
+    }
+
+    @RequestMapping(method=RequestMethod.POST,
+            produces = MediaType.APPLICATION_JSON_VALUE,
+            consumes = MediaType.APPLICATION_JSON_VALUE)
+    public @ResponseBody FindData getSearchUserProfiles(@RequestBody FindData findData) {
+        String data = findData.getData();
+        Long day = Long.valueOf(findData.getDay());
+
+        System.out.println(findData.toString());
+        System.out.println(data);
+        System.out.println(findData.getDay());
+        System.out.println(day);
+
+        return new FindData(callDataService.getCallsign(keysService.getCoordinates(keysService.get(day), data)), null);
     }
 
 //    @ModelAttribute

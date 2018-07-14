@@ -1,16 +1,36 @@
 $(document).ready(function () {
     $("#morzeButton").click(function () {
+
+        var search = {
+            "data" : $("#morzeInput").val(),
+            "day" :"1"
+        };
+
         $.ajax({
-            url: '/code',
-            method: 'GET',
-            data: {'data': $("#morzeInput").val(), 'day': 1},
-            dataType: "json",
-            response: 'text/plain',
-            contentType: "application/json; charset=UTF-8",
-            accept: "text/plain; charset=utf-8", "Content-Type": "text/plain; charset=utf-8",
-            success: function (response) {
-                $("#morzeInput").html(response);
+            type: "POST",
+            contentType : 'application/json; charset=utf-8',
+            response: "application/json; charset=utf-8",
+            dataType : 'json',
+            url: "/code",
+            data: JSON.stringify(search), // Note it is important
+            success :function(result) {
+                $("#morzeInput").val('Ваш позывной: ' + result.data.toString().toUpperCase());
+                $("#morzeButton").setAttribute("disabled", "true");
             }
-        })
-    })
+        });
+    });
+
+    $("#morzeInput").focus(function () {
+        $("#morzeButton").setAttribute("disabled", "false");
+    });
+
+    function myFunction() {
+        document.getElementById("morzeButton").disabled = false;
+        document.getElementById("morzeInput").val('');
+    }
+
+    function myFunction2() {
+        document.getElementById("morzeButton").disabled = true;
+        // document.getElementById("morzeInput").val('');
+    }
 });
