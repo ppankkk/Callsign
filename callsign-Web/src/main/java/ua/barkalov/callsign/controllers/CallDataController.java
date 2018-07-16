@@ -8,9 +8,6 @@ import ua.barkalov.callsign.callsignServices.CallDataService;
 import ua.barkalov.callsign.callsignServices.DTO.FindData;
 import ua.barkalov.callsign.callsignServices.KeysService;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 @Controller
 @RequestMapping("/code")
 public class CallDataController {
@@ -24,32 +21,16 @@ public class CallDataController {
         this.keysService = keysService;
     }
 
-    @RequestMapping(method = RequestMethod.GET,
-                    produces = MediaType.TEXT_PLAIN_VALUE,
-                    consumes = MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody String get(@RequestParam("data") String data, @RequestParam("day") Long day){
-        return callDataService.getCallsign(keysService.getCoordinates(keysService.get(day), data));
-    }
-
     @RequestMapping(method=RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE,
             consumes = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody FindData getSearchUserProfiles(@RequestBody FindData findData) {
-        String data = findData.getData();
-        Long day = Long.valueOf(findData.getDay());
-
-        System.out.println(findData.toString());
-        System.out.println(data);
-        System.out.println(findData.getDay());
-        System.out.println(day);
-
-        return new FindData(callDataService.getCallsign(keysService.getCoordinates(keysService.get(day), data)), null);
+        return new FindData(
+                callDataService.getCallsign(
+                        keysService.getCoordinates(
+                                keysService.get(
+                                        Long.valueOf(findData.getDay())),
+                                findData.getData())),
+                        null);
     }
-
-//    @ModelAttribute
-//    public void setResponseHeaders(HttpServletResponse response) {
-//        response.setHeader("Content-Type", "application/json;charset=UTF-8");
-//        response.setCharacterEncoding("UTF-8");
-//        response.setContentType("application/json;charset=UTF-8");
-//    }
 }

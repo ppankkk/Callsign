@@ -10,6 +10,8 @@
     <!-- Bootstrap -->
     <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
     <link type="text/css" href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/ui_script.js"></script>
 </head>
 <body>
     <div class="header text-center center-block sticky" id="myHeader">
@@ -19,13 +21,12 @@
     <div class="container-fluid text-center center-block content">
         <input type="text"
                id="morzeInput"
-               onfocus="myFunction()"
+               onfocus="morzeInputOnFocusFunction()"
                value="Введите кодовое слово">
         <p id="morzeButtonPlaceholder">
             <button type="button"
                     id="morzeButton"
-                    class="btn btn-md"
-                    onclick="myFunction2()">
+                    class="btn btn-md">
                 Получить позывной
             </button>
         </p>
@@ -33,7 +34,7 @@
 
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/my_script.js"></script>
+    <script type="text/javascript" src="js/ajax_script.js"></script>
 </body>
 
 </html>
