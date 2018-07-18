@@ -1,5 +1,7 @@
 body {
+    margin: 0px;
     background: url(/static/background.jpg) 0 0 repeat;
+    background-attachment: fixed;
 }
 .hide{
     display: none;
