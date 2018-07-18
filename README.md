@@ -2,6 +2,12 @@
 for the military radio needs
 
 
-In the radio (where use Morse code) comunicate in the radio networks. And every station need to have unique callsign (4 characters) that changes everyday. The process to find correct callsign from tables takes many time evereday. And my program can solve this problem.
+The military radio networks use Morse code for communicates. Every station have to use unique callsign (4 characters long) and this callsign must change every day or more often. The process to find correct callsign from tables takes many time every day. And that program can solve this problem.
 
-In future will be GUI (JavaFX). Right now its only logic of the future program.
++ 2018-07-16 WEB working beta versoin avalilable to use.
+
+TODO:
+- Testing
+- Documentation
+- Module what can get code words for voice-calls
+- UI improvements
